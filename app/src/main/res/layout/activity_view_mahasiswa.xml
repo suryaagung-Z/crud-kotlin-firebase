@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Konten Utama -->
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".DashboardActivity">
+
+            <ImageView
+                android:id="@+id/logoTM1"
+                android:layout_width="72dp"
+                android:layout_height="58dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@string/dashnboard_desc_logo"
+                android:src="@drawable/student_icon" />
+
+            <ImageView
+                android:id="@+id/iconMenu"
+                android:layout_width="44dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="50dp"
+                android:contentDescription="@string/dashboard_icon_menu"
+                android:src="@drawable/baseline_apps_24" />
+
+            <TextView
+                android:id="@+id/textListMahasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_centerHorizontal="true"
+                android:text="DATA MAHASISWA"
+                android:layout_below="@id/iconMenu"
+                android:fontFamily="@font/poppinsmedium" />
+
+            <!-- RecyclerView untuk daftar mahasiswa -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMahasiswa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textListMahasiswa"/>
+
+            <!-- TextView untuk status loading atau pesan kosong -->
+            <TextView
+                android:id="@+id/tvLoadingData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewMahasiswa"
+                android:layout_centerHorizontal="true"
+                android:text="Loading data..."
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_below="@id/tvLoadingData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lang_idID_save"
+                android:layout_centerHorizontal="true"
+                android:width="300dp"
+                android:layout_marginTop="15dp" />
+
+            <Button
+                android:id="@+id/btnBackToDashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_lang_idID_back_to_dashboard"
+                android:layout_below="@id/btnSimpan"
+                android:layout_centerHorizontal="true"
+                android:width="300dp"
+                android:layout_marginTop="15dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+    <!-- Navigation View untuk menu samping -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

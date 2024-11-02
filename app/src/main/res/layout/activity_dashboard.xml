@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Konten Utama -->
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DashboardActivity">
+
+        <ImageView
+            android:id="@+id/logoTM1"
+            android:layout_width="72dp"
+            android:layout_height="58dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/dashnboard_desc_logo"
+            android:src="@drawable/student_icon" />
+
+        <ImageView
+            android:id="@+id/iconMenu"
+            android:layout_width="44dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/dashboard_icon_menu"
+            android:src="@drawable/baseline_apps_24" />
+
+        <TextView
+            android:id="@+id/textBiodata1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_centerHorizontal="true"
+            android:text="BIODATA ANDA"
+            android:layout_below="@id/iconMenu"
+            android:fontFamily="@font/poppinsmedium" />
+        <LinearLayout
+            android:id="@+id/ly1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textBiodata1"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/textInputNama1"
+                android:autofillHints="Name"
+                android:fontFamily="@font/poppinsregular"
+                android:backgroundTint="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:ems="15"
+                android:inputType="text"
+                android:hint="@string/input_dashboard_lang_idID_name"
+                android:labelFor="@id/textInputNama1" />
+
+            <EditText
+                android:id="@+id/textInputJurusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputNama1"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="15dp"
+                android:autofillHints="Jurusan"
+                android:backgroundTint="@color/black"
+                android:ems="15"
+                android:fontFamily="@font/poppinsregular"
+                android:hint="@string/input_dashboard_lang_idID_jurusan"
+                android:inputType="text"
+                android:labelFor="@id/textInputJurusan" />
+
+            <EditText
+                android:id="@+id/textInputNIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textInputNama1"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="15dp"
+                android:autofillHints="NIM"
+                android:backgroundTint="@color/black"
+                android:ems="15"
+                android:fontFamily="@font/poppinsregular"
+                android:hint="@string/input_dashboard_lang_idID_NIM"
+                android:inputType="text"
+                android:labelFor="@id/textInputNIM" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_below="@id/ly1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lang_idID_save"
+            android:layout_centerHorizontal="true"
+            android:width="300dp"
+            android:layout_marginTop="15dp" />
+
+        <Button
+            android:id="@+id/btnViewdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Data"
+            android:layout_below="@id/btnSimpan"
+            android:layout_centerHorizontal="true"
+            android:width="300dp"
+            android:layout_marginTop="15dp"
+            />
+
+    </RelativeLayout>
+
+    <!-- Navigation View untuk menu samping -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

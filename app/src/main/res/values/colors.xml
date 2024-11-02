@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FF808080</color>
+
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#FF00FF00</color>
+    <color name="orange">#FFFFA500</color>
+
+    <color name="purple">#FF800080</color>
+    <color name="pink">#FFFFB6C1</color>
+    <color name="brown">#FF804000</color>
+
+    <color name="gradient_start">#1e88e5</color>
+    <color name="gradient_center">#673ab7</color>
+    <color name="gradient_end">#4527a0</color>
+    <color name="primaryColor">#C721AC</color>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNamaMahasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_dashboard_lang_idID_name"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppinssemibold" />
+
+            <TextView
+                android:id="@+id/tvJurusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_dashboard_lang_idID_jurusan"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsmedium" />
+
+            <TextView
+                android:id="@+id/tvNIM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/input_dashboard_lang_idID_NIM"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppinsmedium" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iconEdit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_edit_note_24"
+            android:contentDescription="@string/btn_lang_idID_edit_icon_description"
+            android:layout_marginStart="16dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/iconDelete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/baseline_delete_outline_24"
+            android:contentDescription="@string/btn_lang_idID_delete_icon_description"
+            android:layout_marginStart="16dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
